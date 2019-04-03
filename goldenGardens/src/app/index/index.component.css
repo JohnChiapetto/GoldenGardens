@@ -1,4 +1,10 @@
-body{
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    left:0px;
+    margin: 0px;
     background-image: /*url(GGPhotos/Website\ Background.jpeg)*/url(https://files.slack.com/files-pri/TFE6RTUA3-FHCJHGMJ5/website_background.jpeg);
     background-size: cover;
     
