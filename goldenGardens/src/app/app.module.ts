@@ -9,7 +9,8 @@ import { IndexComponent } from './index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent
+    IndexComponent,
+
   ],
   imports: [
     BrowserModule,
