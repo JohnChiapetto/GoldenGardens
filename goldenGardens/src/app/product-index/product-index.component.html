@@ -1,0 +1,28 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<h1>Products</h1>
+
+<ul class="products">
+  <li *ngFor="let product of products">
+    <span>{{product.product_name}}</span> {{product.product_name}}
+  </li>
+</ul>
+<!-- <a mat-raised-button color="primary">Create New</a>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+  </mat-table>
+</div>
+
+<ng-container matColumnDef="product_name">
+  <mat-header-cell *matHeaderCellDef>Plant</mat-header-cell>
+  <mat-cell *matCellDef="let note"> {{product.product_name}}</mat-cell>
+</ng-container>
+
+<ng-container magColumnDef="product_description">
+  <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+  <mat-cell *matCellDef="let note"> {{product.product_description}}</mat-cell>
+</ng-container> -->
