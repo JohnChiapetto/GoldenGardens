@@ -1,6 +1,36 @@
-body{
-margin-top: 5%;
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    left:0px;
+    margin: 0px;
+    background-image: /*url(GGPhotos/Website\ Background.jpeg)*/url(https://files.slack.com/files-pri/TFE6RTUA3-FHCJHGMJ5/website_background.jpeg);
+    background-size: cover;
+    padding: 50px;
+    
+
 }
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 5em; 
+    color: #e5b624;
+}
+
+h2{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 2em;
+}
+.photolinks{
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+
+}
+
 
 .form-group{
 margin-left: 25%;
@@ -10,3 +40,4 @@ max-width: 50%;
 .send-section{
     margin-left: 25%;
 }
+
