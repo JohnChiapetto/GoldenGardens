@@ -1,6 +1,11 @@
-<script>
-  document.innerHtml = "";
-</script>
-<p>
-  login works!
-</p>
+<form method="POST" action="login">
+  <div>
+    <label for="username">UserName</label>
+    <input id="username" name="username">
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password">
+  </div>
+  <input type="submit" value="Submit">
+</form>

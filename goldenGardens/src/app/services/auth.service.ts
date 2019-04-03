@@ -9,6 +9,5 @@ export class AuthService {
 
   login(loginInfo) {
     const str = `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
-    
   }
 }
