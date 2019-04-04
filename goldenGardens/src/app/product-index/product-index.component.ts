@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ProductsService } from '../services/products.service';
+import { Component, OnInit} from '@angular/core';
+import { ProductsService } from '../services/products.service';
 import { Product } from '../product-index/product';
 import { MatTableDataSource} from '@angular/material';
 
@@ -21,6 +21,7 @@ export class ProductIndexComponent implements OnInit {
     this._productService.getProducts().subscribe((products: Product[]) => {
       this.dataSource = new MatTableDataSource<Product>(products);
     });
+
   }
 }
 

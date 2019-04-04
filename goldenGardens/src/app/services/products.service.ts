@@ -6,15 +6,16 @@ import { Observable } from 'rxjs';
 
 const ApiUrl = 'https://efa-gardenapp-backend.herokuapp.com/api/product';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 
 export class ProductsService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getProducts() {
-  return this._http.get(`${ApiUrl}/Products`, //*{headers: this.getHeaders()*// }
-  );
+  return this.http.get('https://efa-gardenapp-backend.herokuapp.com/api/product') //*{headers: this.getHeaders()*// }
   }
  }
 //   private getHeaders() {
