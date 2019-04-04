@@ -8,6 +8,7 @@ import { ProductsService } from './services/products.service';
 import { MatTableDataSource } from '@angular/material';
 import { MatTableModule } from '@angular/material';
 import { from } from 'rxjs';
+import { IndexComponent } from './index/index.component';
 
 const routes = [
   {path: 'products', component: ProductIndexComponent}
@@ -15,7 +16,8 @@ const routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ProductIndexComponent
+    ProductIndexComponent,
+    IndexComponent
   ],
 
   imports: [
