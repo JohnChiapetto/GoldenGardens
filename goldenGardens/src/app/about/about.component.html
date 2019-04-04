@@ -8,8 +8,10 @@
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   </head>
-<body>
-      <img width="150" alt="Golden Gardens Logo" src="https://files.slack.com/files-pri/TFE6RTUA3-FHJKD439N/logo.png">
+  <body>
+    <div class="bg-img">
+    <div class="content">
+    <img width="150" alt="Golden Gardens Logo" src="https://files.slack.com/files-pri/TFE6RTUA3-FHJKD439N/logo.png">
 <nav>
 <header>                     
 <div>
@@ -22,11 +24,12 @@
 </div>
 </header>
 </nav>
-  
   <h1>About Golden Gardens</h1>
   <p>Golden Gardens is a family business that has happily served our community for over 50 years. We love our customers and appreciate hearing from you. Please use the contact form below to send us your questions, comments, and concerns.
   We look forward to your messages, and hope to hear from you soon.</p>
+  
   <!-- ADD your email in the action attribute -->
+  <div class = "table">
   <form ng-app="app"
     action="https://formspree.io/lisajkilgore@gmail.com"
     method="POST"
@@ -81,12 +84,19 @@
     <input type="hidden" name="_next" routerLink="">
     <div class="send-section">
       <button type="submit" class="btn btn-secondary btn-lg" 
-              value="send"
-              ng-disabled="upliftForm.$invalid">
-              <h4>Send Message</h4>
-      </button>
+      value="send"
+      ng-disabled="upliftForm.$invalid">
+      <h4>Send Message</h4>
+    </button>
+  </div>
+</form>
+  <div class ="address">
+          <br>1234 Golden Gardens Boulevard
+          <br>Fishers, IN 46038
+          <br>317-555-5555
+          <br>goldengardens@gmail.com
+        </div>      
     </div>
-  </form>
   <!-- Scripts -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -102,5 +112,7 @@
             ['ngMessages']);
         })();
   </script>
+  </div>
+  </div>
 </body>
 </html>
