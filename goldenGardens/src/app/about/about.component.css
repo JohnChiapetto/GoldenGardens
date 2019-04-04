@@ -59,6 +59,14 @@ h4{
     font-family: 'Playfair Display', serif;
     text-align: left;
     font-size: 1em; 
+    color: black;
+}
+
+h5{
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+    font-size: 1em; 
+    color: white;
 }
 
 p{
@@ -83,7 +91,7 @@ p{
 
 .form-group{
 margin-left: 25%;
-max-width: 40%;
+max-width: 50%;
 }
 
 .send-section{
