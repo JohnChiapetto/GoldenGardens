@@ -10,19 +10,29 @@ import {
   MatInputModule
 } from '@angular/material';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { IndexComponent } from './index/index.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.service';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ProductIndexComponent } from './product-index/product-index.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsService } from './services/products.service';
+import { MatTableDataSource } from '@angular/material';
+import { MatTableModule } from '@angular/material';
+import { IndexComponent } from './index/index.component';
 
+const routes = [
+  {path: 'products', component: ProductIndexComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    ProductIndexComponent,
     IndexComponent
   ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -38,8 +48,15 @@ import { AuthService } from './services/auth.service';
     ReactiveFormsModule,
   ],
   providers: [
-    AuthService
+    AuthService,
+    ProductsService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    AppRoutingModule,
+    HttpClientModule,
+    MatTableModule
+  ]
+ 
 })
 export class AppModule { }

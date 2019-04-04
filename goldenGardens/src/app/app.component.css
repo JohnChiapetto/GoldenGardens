@@ -1,0 +1,47 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0px;
+    left:0px;
+    margin: 0px;
+    background-image: url(https://files.slack.com/files-pri/TFE6RTUA3-FHCJHGMJ5/website_background.jpeg);
+    background-size: cover;
+    padding: 50px;
+    }
+
+h1{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 5em; 
+    color: #e5b624;
+    
+    }
+    
+h2{
+    font-family: 'Abril Fatface', cursive;
+    text-align: center;
+    font-size: 2em;
+}
+h3{
+    font-family: 'Abril Fatface', cursive;
+    text-align: left;
+    font-size: 1em;
+}
+h4{
+    font-family: 'Abril Fatface', cursive;
+    text-align: left;
+    font-size: 0.5em; 
+}
+
+.photolinks{
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+
+}
+
+
+
+
+
