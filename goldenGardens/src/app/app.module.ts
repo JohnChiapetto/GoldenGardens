@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -16,34 +15,32 @@ import { AuthService } from './services/auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductIndexComponent } from './product-index/product-index.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ProductsService } from './services/products.service';
 import { MatTableDataSource } from '@angular/material';
 import { MatTableModule } from '@angular/material';
 import { IndexComponent } from './index/index.component';
+import { AboutComponent } from './about/about.component';
 
-const routes = [
-  {path: 'products', component: ProductIndexComponent}
-];
 @NgModule({
   declarations: [
     AppComponent,
+    IndexComponent,
     LoginComponent,
-    ProductIndexComponent,
-    IndexComponent
+    AboutComponent,
+    ProductIndexComponent
   ],
-
   imports: [
-    BrowserModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
     AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  exports:[
+  exports: [
     FormsModule,
     ReactiveFormsModule,
   ],
@@ -52,10 +49,10 @@ const routes = [
     ProductsService
   ],
   bootstrap: [
-    AppComponent,
-    AppRoutingModule,
-    HttpClientModule,
-    MatTableModule
+    AppComponent//,
+    // AppRoutingModule,
+    // HttpClientModule,
+    // MatTableModule
   ]
  
 })
