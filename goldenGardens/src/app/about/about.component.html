@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>About Golden Gardens</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/index/index.component.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   </head>
 <body>
-  <h1>Contact Golden Gardens</h1>
+      <img width="150" alt="Golden Gardens Logo" src="https://files.slack.com/files-pri/TFE6RTUA3-FHJKD439N/logo.png">
+<nav>
+<header>                     
+<div>
+  <ul id="nav-ul">          
+  <li><a routerLink="">Home</a></li>
+  <li><a routerLink="/about">About Us</a></li>
+  <li><a routerLink="/products">Products</a></li>
+  <li><a routerLink="/login">Login</a></li>
+  </ul>
+</div>
+</header>
+</nav>
+  
+  <h1>About Golden Gardens</h1>
+  <p>Golden Gardens is a family business that has happily served our community for over 50 years. We love our customers and appreciate hearing from you. Please use the contact form below to send us your questions, comments, and concerns.
+  We look forward to your messages, and hope to hear from you soon.</p>
   <!-- ADD your email in the action attribute -->
   <form ng-app="app"
     action="https://formspree.io/lisajkilgore@gmail.com"
@@ -16,7 +34,7 @@
     novalidate>
     <!-- FULL NAME -->
     <div class="form-group">
-      <label for="fullname">Full Name</label>
+      <label for="fullname"><h3>Full Name</h3></label>
       <input type="text"
         class="form-control"
         name="fullname"
@@ -24,13 +42,13 @@
         required />
       <div ng-messages="upliftForm.fullname.$error" ng-if="upliftForm.fullname.$touched">
         <div ng-message="required">
-          Please enter First and Last name!
+          <h4>Please enter First and Last name</h4>
         </div>
       </div>
     </div>
     <!-- EMAIL ADDRESS -->
     <div class="form-group">
-      <label for="email">Email address</label>
+      <label for="email"><h3>Email address</h3></label>
           <input type="email"
             class="form-control"
             name="_replyto"
@@ -39,16 +57,15 @@
             required />
         <div ng-messages="upliftForm._replyto.$error" ng-if="upliftForm._replyto.$touched">
           <div class="ng-message" ng-message="required">
-            Email is required!
+            <h4>Valid Email is Required</h4>
           </div>
           <div class="ng-message" ng-message="pattern">
-            Must be a valid email!
-          </div>
+           </div>
         </div>
     </div>
     <!-- MESSAGE BODY-->
     <div class="form-group">
-      <label for="message">Message</label>
+      <label for="message"><h3>Message</h3></label>
       <textarea class="form-control"
           rows="3"
           name="message"
@@ -57,16 +74,16 @@
       <div ng-messages="upliftForm.message.$error" ng-if="upliftForm.message.$touched">
       <div class="ng-message"
         ng-message="required">
-          Message is Required!</div>
+          <h4>Message is Required</h4></div>
       </div>
     </div>
     <!-- redirect to a different url when user submits the form -->
-    <input type="hidden" name="_next" value="./thankyou.html" />
+    <input type="hidden" name="_next" routerLink="">
     <div class="send-section">
-      <button type="submit"
+      <button type="submit" class="btn btn-secondary btn-lg" 
               value="send"
               ng-disabled="upliftForm.$invalid">
-        <p style="color: #fff;">Send</p>
+              <h4>Send Message</h4>
       </button>
     </div>
   </form>
