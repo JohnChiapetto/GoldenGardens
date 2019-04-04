@@ -22,6 +22,17 @@ h2{
     text-align: center;
     font-size: 2em;
 }
+h3{
+    font-family: 'Abril Fatface', cursive;
+    text-align: left;
+    font-size: 2em;
+}
+h4{
+    font-family: 'Abril Fatface', cursive;
+    text-align: left;
+    font-size: 0.5em; 
+}
+
 .photolinks{
     display: inline;
     list-style: none;
