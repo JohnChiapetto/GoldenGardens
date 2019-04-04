@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   private _loginForm:FormGroup;
 
-  constructor(private _form:FormBuilder) {
+  constructor(private _authService:AuthService,private _form:FormBuilder,private _router:Router) {
     this.createForm();
   }
 
@@ -19,8 +21,14 @@ export class LoginComponent implements OnInit {
 
   createForm() {
     this._loginForm = this._form.group({
-      email: new FormControl,
-      password: new FormControl
+      email: new FormControl(),
+      password: new FormControl()
+    });
+  }
+
+  onSubmit() {
+    this._authService.login(this._loginForm.value).subscribe(data => {
+      this._router.navigate(['']);
     });
   }
 
